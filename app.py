@@ -45,12 +45,12 @@ def precipitation():
     all_precip = []
     for precip in one_year_ago:
         precip_dict = {}
-        precip_dict["name"] = precip.name
-        precip_dict["age"] = precip.age
+        precip_dict["name"] = precip.date
+        precip_dict["precip"] = precip.prcp
 
         all_precip.append(precip_dict)
 
-    return jsonify(Measurement)
+    return jsonify(all_precip)
 
 
 
@@ -67,8 +67,6 @@ def tobs():
    
 
    return jsonify()
-
-
 
 
 
